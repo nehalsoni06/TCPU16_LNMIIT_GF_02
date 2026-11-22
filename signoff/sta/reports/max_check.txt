@@ -1,0 +1,44 @@
+Startpoint: _749_ (rising edge-triggered flip-flop clocked by core_clk)
+Endpoint: _825_ (rising edge-triggered flip-flop clocked by core_clk)
+Path Group: core_clk
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock core_clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   0.00    0.00 ^ _749_/CLK (gf180mcu_fd_sc_mcu7t5v0__dffq_1)
+   3.10    3.10 ^ _749_/Q (gf180mcu_fd_sc_mcu7t5v0__dffq_1)
+   1.14    4.24 v _420_/Z (gf180mcu_fd_sc_mcu7t5v0__mux4_1)
+   1.26    5.50 v _422_/Z (gf180mcu_fd_sc_mcu7t5v0__mux2_1)
+   1.43    6.93 ^ _423_/ZN (gf180mcu_fd_sc_mcu7t5v0__clkinv_1)
+   0.41    7.34 v _518_/ZN (gf180mcu_fd_sc_mcu7t5v0__nand3_1)
+   5.06   12.41 ^ _550_/ZN (gf180mcu_fd_sc_mcu7t5v0__oai31_1)
+   1.17   13.57 v _551_/ZN (gf180mcu_fd_sc_mcu7t5v0__clkinv_1)
+   0.79   14.36 ^ _553_/ZN (gf180mcu_fd_sc_mcu7t5v0__nand2_1)
+   0.52   14.87 v _576_/ZN (gf180mcu_fd_sc_mcu7t5v0__oai211_1)
+   0.73   15.60 v _602_/Z (gf180mcu_fd_sc_mcu7t5v0__and3_1)
+   1.13   16.73 v _604_/Z (gf180mcu_fd_sc_mcu7t5v0__or3_1)
+   0.77   17.50 ^ _642_/ZN (gf180mcu_fd_sc_mcu7t5v0__oai32_1)
+   0.36   17.86 v _669_/ZN (gf180mcu_fd_sc_mcu7t5v0__aoi211_1)
+   0.44   18.30 ^ _670_/ZN (gf180mcu_fd_sc_mcu7t5v0__nor2_1)
+   0.60   18.90 ^ _671_/ZN (gf180mcu_fd_sc_mcu7t5v0__xnor2_1)
+   0.23   19.13 v _675_/ZN (gf180mcu_fd_sc_mcu7t5v0__aoi221_1)
+   0.80   19.93 ^ _676_/ZN (gf180mcu_fd_sc_mcu7t5v0__aoi221_1)
+   0.00   19.93 ^ _825_/D (gf180mcu_fd_sc_mcu7t5v0__dffq_1)
+          19.93   data arrival time
+
+  10.00   10.00   clock core_clk (rise edge)
+   0.00   10.00   clock network delay (ideal)
+  -0.20    9.80   clock uncertainty
+   0.00    9.80   clock reconvergence pessimism
+           9.80 ^ _825_/CLK (gf180mcu_fd_sc_mcu7t5v0__dffq_1)
+  -0.48    9.32   library setup time
+           9.32   data required time
+---------------------------------------------------------
+           9.32   data required time
+         -19.93   data arrival time
+---------------------------------------------------------
+         -10.62   slack (VIOLATED)
+
+

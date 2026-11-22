@@ -1,3 +1,4 @@
+/* verilator lint_off DECLFILENAME */
 
 /*
  * Copyright (c) 2024 Nehal Soni

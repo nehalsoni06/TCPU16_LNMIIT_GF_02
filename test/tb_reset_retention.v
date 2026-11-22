@@ -68,14 +68,14 @@ module tb_reset_retention;
         repeat (2) @(negedge clk);
 
         // Check that program memory retained its contents.
-        // Change dut.u_prog_mem.mem to match your actual RTL hierarchy.
-        if (dut.u_prog_mem.mem[0] !== {3'b000, 5'd5})
+        // Change dut.u_mem.m to match your actual RTL hierarchy.
+        if (dut.u_mem.m[0] !== {3'b000, 5'd5})
             $error("Instruction 0 was not retained");
 
-        if (dut.u_prog_mem.mem[1] !== {3'b001, 5'd3})
+        if (dut.u_mem.m[1] !== {3'b001, 5'd3})
             $error("Instruction 1 was not retained");
 
-        if (dut.u_prog_mem.mem[2] !== {3'b111, 5'd0})
+        if (dut.u_mem.m[2] !== {3'b111, 5'd0})
             $error("Instruction 2 was not retained");
 
         $display("Program memory retention check passed");

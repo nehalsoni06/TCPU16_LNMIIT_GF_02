@@ -1,0 +1,44 @@
+Startpoint: _749_ (rising edge-triggered flip-flop clocked by core_clk)
+Endpoint: _825_ (rising edge-triggered flip-flop clocked by core_clk)
+Path Group: core_clk
+Path Type: max
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock core_clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000 ^ _749_/CLK (gf180mcu_fd_sc_mcu7t5v0__dffq_1)
+   3.1035    3.1035 ^ _749_/Q (gf180mcu_fd_sc_mcu7t5v0__dffq_1)
+   1.1414    4.2450 v _420_/Z (gf180mcu_fd_sc_mcu7t5v0__mux4_1)
+   1.2551    5.5000 v _422_/Z (gf180mcu_fd_sc_mcu7t5v0__mux2_1)
+   1.4303    6.9304 ^ _423_/ZN (gf180mcu_fd_sc_mcu7t5v0__clkinv_1)
+   0.4097    7.3401 v _518_/ZN (gf180mcu_fd_sc_mcu7t5v0__nand3_1)
+   5.0650   12.4051 ^ _550_/ZN (gf180mcu_fd_sc_mcu7t5v0__oai31_1)
+   1.1658   13.5709 v _551_/ZN (gf180mcu_fd_sc_mcu7t5v0__clkinv_1)
+   0.7864   14.3572 ^ _553_/ZN (gf180mcu_fd_sc_mcu7t5v0__nand2_1)
+   0.5167   14.8739 v _576_/ZN (gf180mcu_fd_sc_mcu7t5v0__oai211_1)
+   0.7305   15.6044 v _602_/Z (gf180mcu_fd_sc_mcu7t5v0__and3_1)
+   1.1258   16.7302 v _604_/Z (gf180mcu_fd_sc_mcu7t5v0__or3_1)
+   0.7678   17.4980 ^ _642_/ZN (gf180mcu_fd_sc_mcu7t5v0__oai32_1)
+   0.3642   17.8622 v _669_/ZN (gf180mcu_fd_sc_mcu7t5v0__aoi211_1)
+   0.4375   18.2998 ^ _670_/ZN (gf180mcu_fd_sc_mcu7t5v0__nor2_1)
+   0.5995   18.8993 ^ _671_/ZN (gf180mcu_fd_sc_mcu7t5v0__xnor2_1)
+   0.2348   19.1340 v _675_/ZN (gf180mcu_fd_sc_mcu7t5v0__aoi221_1)
+   0.7996   19.9336 ^ _676_/ZN (gf180mcu_fd_sc_mcu7t5v0__aoi221_1)
+   0.0000   19.9336 ^ _825_/D (gf180mcu_fd_sc_mcu7t5v0__dffq_1)
+            19.9336   data arrival time
+
+  10.0000   10.0000   clock core_clk (rise edge)
+   0.0000   10.0000   clock network delay (ideal)
+  -0.2000    9.8000   clock uncertainty
+   0.0000    9.8000   clock reconvergence pessimism
+             9.8000 ^ _825_/CLK (gf180mcu_fd_sc_mcu7t5v0__dffq_1)
+  -0.4816    9.3184   library setup time
+             9.3184   data required time
+-------------------------------------------------------------
+             9.3184   data required time
+           -19.9336   data arrival time
+-------------------------------------------------------------
+           -10.6152   slack (VIOLATED)
+
+

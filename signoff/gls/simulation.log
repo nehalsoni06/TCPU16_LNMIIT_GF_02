@@ -1,0 +1,9 @@
+VCD info: dumpfile signoff/gls/tcpu16_gls.vcd opened for output.
+GLS: Program loaded.
+PASS: Lower byte = 0x20
+PASS: Upper byte = 0x01
+================================
+GLS PASS: ALL CHECKS PASSED
+Cycles waited: 25
+================================
+signoff/gls/tb_gls.v:128: $finish called at 452000 (1ps)

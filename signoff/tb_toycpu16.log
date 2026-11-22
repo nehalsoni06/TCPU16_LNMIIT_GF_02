@@ -1,0 +1,8 @@
+VCD info: dumpfile build/tcpu16_wave.vcd opened for output.
+Program loaded successfully.
+PASS: ACC = 0x0120
+PASS: Lower byte = 0x20
+PASS: Upper byte = 0x01
+ALL TESTS PASSED
+Execution cycles counted: 8
+tb_toycpu16.v:146: $finish called at 268000 (1ps)

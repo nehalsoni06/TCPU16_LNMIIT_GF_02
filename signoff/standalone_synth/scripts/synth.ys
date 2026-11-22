@@ -1,0 +1,21 @@
+# TCPU-16 standalone GF180 synthesis
+# Target: GF180MCU 7-track, TT 025C 3.30V
+
+read_verilog -I /home/vsduser/Desktop/tcpu16/TCPU16_LNMIIT_GF_02/src /home/vsduser/Desktop/tcpu16/TCPU16_LNMIIT_GF_02/src/project.v /home/vsduser/Desktop/tcpu16/TCPU16_LNMIIT_GF_02/src/toy_cpu16.v /home/vsduser/Desktop/tcpu16/TCPU16_LNMIIT_GF_02/src/alu.v /home/vsduser/Desktop/tcpu16/TCPU16_LNMIIT_GF_02/src/dec.v /home/vsduser/Desktop/tcpu16/TCPU16_LNMIIT_GF_02/src/loader.v /home/vsduser/Desktop/tcpu16/TCPU16_LNMIIT_GF_02/src/npc.v /home/vsduser/Desktop/tcpu16/TCPU16_LNMIIT_GF_02/src/omux.v /home/vsduser/Desktop/tcpu16/TCPU16_LNMIIT_GF_02/src/pmem.v
+
+hierarchy -check -top tt_um_nehalsoni06_tcpu16
+
+# Generic synthesis and flattening
+synth -top tt_um_nehalsoni06_tcpu16 -flatten -noabc
+
+# Map flip-flops and combinational logic to GF180 standard cells
+dfflibmap -liberty /home/vsduser/ttsetup/pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_3v30.lib
+abc -liberty /home/vsduser/ttsetup/pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_3v30.lib
+
+# Clean and report
+clean
+stat -liberty /home/vsduser/ttsetup/pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_3v30.lib
+
+# Export mapped netlists
+write_verilog -noattr /home/vsduser/Desktop/tcpu16/TCPU16_LNMIIT_GF_02/signoff/standalone_synth/out/tt_um_nehalsoni06_tcpu16_mapped.v
+write_json /home/vsduser/Desktop/tcpu16/TCPU16_LNMIIT_GF_02/signoff/standalone_synth/out/tt_um_nehalsoni06_tcpu16_mapped.json

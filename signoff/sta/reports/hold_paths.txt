@@ -1,0 +1,28 @@
+Startpoint: uio_in[0] (input port clocked by core_clk)
+Endpoint: _827_ (rising edge-triggered flip-flop clocked by core_clk)
+Path Group: core_clk
+Path Type: min
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock core_clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   1.0000    1.0000 v input external delay
+   0.0000    1.0000 v uio_in[0] (in)
+   0.0000    1.0000 v _827_/D (gf180mcu_fd_sc_mcu7t5v0__dffq_1)
+             1.0000   data arrival time
+
+   0.0000    0.0000   clock core_clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.2000    0.2000   clock uncertainty
+   0.0000    0.2000   clock reconvergence pessimism
+             0.2000 ^ _827_/CLK (gf180mcu_fd_sc_mcu7t5v0__dffq_1)
+   0.0670    0.2670   library hold time
+             0.2670   data required time
+-------------------------------------------------------------
+             0.2670   data required time
+            -1.0000   data arrival time
+-------------------------------------------------------------
+             0.7330   slack (MET)
+
+
